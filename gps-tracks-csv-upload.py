@@ -8,7 +8,7 @@ url = "https://api.tollguru.com/v1/gps-tracks-csv-upload?vehicleType=2AxlesTruck
 
 headers = {
     'x-api-key': 'TOLLGURU_API_KEY',
-    'Content-Type': 'text/plain'  # application/json
+    'Content-Type': 'text/csv'
 }
 
 with open(payload, 'rb') as f:
