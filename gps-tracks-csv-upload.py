@@ -1,8 +1,7 @@
 import json
 import requests
 
-
-payload = 'lat-long-france-sample.csv'
+payload = 'france-GPS-Track-sample.csv'
 
 url = "https://api.tollguru.com/v1/gps-tracks-csv-upload?vehicleType=2AxlesTruck"
 
