@@ -9,7 +9,7 @@ TOLLGURU_API_KEY = "YOUR_TOLLGURU_API_KEY"
 def gps_tracks_csv_upload(isAsync="false"):
     payload = 'lat-long-france-sample.csv'
 
-    url = f"https://api.tollguru.com/v1/gps-tracks-csv-upload?isAsync={isAsync}&weight=30000&height=10&vehicleType=5AxlesTruck&vehicleName=123456"
+    url = f"https://apis.tollguru.com/toll/v2/gps-tracks-csv-upload?isAsync={isAsync}&weight=30000&height=10&vehicleType=5AxlesTruck&vehicleName=123456"
 
     headers = {
         'x-api-key': TOLLGURU_API_KEY,
@@ -26,7 +26,7 @@ def gps_tracks_csv_download(response_from_gps_tracks_csv_upload, retry, delay: i
     count = retry # number of retries before stoping
     status = "ERROR"
     while count >= 0 and status == "ERROR" :
-        url = "https://api.tollguru.com/v1/gps-tracks-csv-download"
+        url = "https://apis.tollguru.com/toll/v2/gps-tracks-csv-download"
 
         headers = {
             'x-api-key': TOLLGURU_API_KEY,
